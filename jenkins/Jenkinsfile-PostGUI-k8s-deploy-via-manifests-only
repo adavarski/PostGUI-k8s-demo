@@ -1,0 +1,37 @@
+ pipeline {
+  agent any
+  options {
+    timestamps()
+    disableConcurrentBuilds()
+  }
+
+  stages {
+ 
+      stage('Clone PostGUI Demo Repository') {
+      steps {
+        checkout([$class: 'GitSCM', 
+          branches: [[name: "main"]], 
+          doGenerateSubmoduleConfigurations: false,
+          extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'postgui']],
+          submoduleCfg: [],
+          userRemoteConfigs: [[credentialsId: 'devops', url: 'git@github.com:adavarski/PostGUI-k8s-demo.git']]
+        ])
+      }
+    }
+ 
+ 
+      stage('Deploy Postgre, PostREST and PostGUI via ks manifests') {
+      steps {
+        dir('postgui/k8s/k8s-manifests') {
+          script {
+             withEnv(["KUBECONFIG=$HOME/.kube/k3s.yaml"])
+             {
+             sh "kubectl apply -f ."
+             }
+            }
+          }
+        }
+      }
+   }
+}
+

@@ -1,0 +1,80 @@
+def app
+registryCredential = 'docker-hub-credentials'
+    
+pipeline {
+  agent any
+  options {
+    timestamps()
+    disableConcurrentBuilds()
+  }
+
+  stages {
+ 
+      stage('Clone PostGUI Demo Repository') {
+      steps {
+        checkout([$class: 'GitSCM', 
+          branches: [[name: "main"]], 
+          doGenerateSubmoduleConfigurations: false,
+          extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'postgui']],
+          submoduleCfg: [],
+          userRemoteConfigs: [[credentialsId: 'devops', url: 'git@github.com:adavarski/PostGUI-k8s-demo.git']]
+        ])
+      }
+    }
+ 
+ 
+      stage('Build PostGUI docker image') {
+      steps {
+        dir('postgui/postgui-docker') {
+          script {
+             
+             app = docker.build("davarski/postgui")
+             
+            }
+          }
+        }
+      }
+      
+      stage('Push PostGUI docker image to DockerHub') {
+        steps {
+            dir('postgui/postgui-docker'){
+            script {
+            
+            docker.withRegistry('', registryCredential) {
+            app.push("1.0")
+            app.push("latest")
+             
+             
+            }
+          }
+        }
+      }
+   }
+   
+         stage('Deploy Postgres & PostgREST via k8s manifests') {
+      steps {
+        dir('postgui/k8s/k8s-manifests') {
+          script {
+             withEnv(["KUBECONFIG=$HOME/.kube/k3s.yaml"])
+             {
+             sh "kubectl apply -f postgres-deployment.yaml -f postgres-service.yaml -f postgrest-deployment.yaml -f postgrest-service.yaml"
+             }
+            }
+        }
+      }
+      }
+      
+      stage('Deploy PostGUI via k8s Helm Chart') {
+      steps {
+        dir('postgui/k8s/helm') {
+          script {
+             withEnv(["KUBECONFIG=$HOME/.kube/k3s.yaml"])
+             {
+             sh "helm upgrade --install postgui postgui"
+             }
+           }    
+         }
+       }
+     }
+   }
+ }

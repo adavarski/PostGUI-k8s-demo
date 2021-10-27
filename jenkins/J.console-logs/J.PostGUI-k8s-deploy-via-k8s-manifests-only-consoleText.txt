@@ -1,0 +1,60 @@
+Started by user Anastas Davarski
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/PostGUI-k8s-deploy-via-k8s-manifests-only
+[Pipeline] {
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Clone PostGUI Demo Repository)
+[Pipeline] checkout
+[2021-10-27T07:41:49.215Z] The recommended git tool is: NONE
+[2021-10-27T07:41:49.216Z] using credential devops
+[2021-10-27T07:41:49.233Z]  > git rev-parse --is-inside-work-tree # timeout=10
+[2021-10-27T07:41:49.261Z] Fetching changes from the remote Git repository
+[2021-10-27T07:41:49.262Z]  > git config remote.origin.url git@github.com:adavarski/PostGUI-k8s-demo.git # timeout=10
+[2021-10-27T07:41:49.266Z] Fetching upstream changes from git@github.com:adavarski/PostGUI-k8s-demo.git
+[2021-10-27T07:41:49.266Z]  > git --version # timeout=10
+[2021-10-27T07:41:49.271Z]  > git --version # 'git version 2.17.1'
+[2021-10-27T07:41:49.272Z] using GIT_SSH to set credentials Github devops 
+[2021-10-27T07:41:49.283Z]  > git fetch --tags --progress -- git@github.com:adavarski/PostGUI-k8s-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+[2021-10-27T07:41:50.800Z]  > git rev-parse origin/main^{commit} # timeout=10
+[2021-10-27T07:41:50.805Z] Checking out Revision cc3194d076e4eeb0103defa6f6946e9fd029000d (origin/main)
+[2021-10-27T07:41:50.805Z]  > git config core.sparsecheckout # timeout=10
+[2021-10-27T07:41:50.811Z]  > git checkout -f cc3194d076e4eeb0103defa6f6946e9fd029000d # timeout=10
+[2021-10-27T07:41:50.847Z] Commit message: "Update Jenkinsfile-PostGUI-k8s-deploy-via-manifests-only"
+[2021-10-27T07:41:50.847Z] First time build. Skipping changelog.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy Postgre, PostREST and PostGUI via ks manifests)
+[Pipeline] dir
+[2021-10-27T07:41:50.994Z] Running in /var/lib/jenkins/workspace/PostGUI-k8s-deploy-via-k8s-manifests-only/postgui/k8s/k8s-manifests
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+[2021-10-27T07:41:51.389Z] + kubectl apply -f .
+[2021-10-27T07:41:51.948Z] deployment.apps/postgres created
+[2021-10-27T07:41:51.948Z] service/postgres created
+[2021-10-27T07:41:51.948Z] deployment.apps/postgrest created
+[2021-10-27T07:41:51.948Z] service/postgrest created
+[2021-10-27T07:41:51.948Z] deployment.apps/postgui created
+[2021-10-27T07:41:52.199Z] service/postgui created
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
