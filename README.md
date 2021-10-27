@@ -75,7 +75,7 @@ service/postgui created
 $ kubectl delete -f . 
 ```
 
-Note: This demo repo is just a PoC for local use only, and will not use k8s StatefulSets/k8s Operators for k8s workloads (Postgre DB, etc.). For production we have to use k8s StatefulSets/k8s Operators (for Postgre DB, etc.).
+Note: This demo repo is just a Proof of Concept (POC) for local use only, and will not utilize k8s StatefulSets/k8s Operators for k8s workloads (Postgre DB, etc.). For production we have to use k8s StatefulSets/k8s Operators (for Postgre DB, etc.).
 
 ### 2. Provide a Helm Chart/Templates that deploys the App above inside K8S cluster so it is in a fully working state with its required dependencies. 
 
@@ -155,6 +155,8 @@ Handling connection for 8771
 Check PostGUI: Browser: http://localhost:8771
 
 <img src="https://github.com/adavarski/PostGUI-k8s-demo/blob/main/pictures/postgregui-UI.png" width="700">
+
+TODO: Parametrize J.pipelines for App versioning (Helm, etc.) and upgrades. Use Jenkins k8s plugins. Better Postger DB init.
 
 ### 4. BASH: 
 
