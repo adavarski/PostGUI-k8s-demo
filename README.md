@@ -156,7 +156,7 @@ Check PostGUI: Browser: http://localhost:8771
 
 <img src="https://github.com/adavarski/PostGUI-k8s-demo/blob/main/pictures/postgregui-UI.png" width="700">
 
-TODO: Parametrize J.pipelines for App versioning (Helm, etc.) and upgrades. Use Jenkins k8s plugins. Better Postger DB init.
+TODO: Parametrize J.pipelines : App versioning and upgrades (Helm, etc.) and GitOps (ArgoCD). Better Postgre DB setup/init. Use Jenkins k8s plugins for k8s deployments (for PoC KISS is used).
 
 ### 4. BASH: 
 
