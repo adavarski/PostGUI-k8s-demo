@@ -29,17 +29,16 @@ sudo apt install -y gnupg2 pass
 curl -sfL https://get.k3s.io | sh -
 
 #Install kubectl
-curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x kubectl && sudo cp kubectl /usr/local/bin/ && rm kubectl
+curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x kubectl && sudo mv kubectl /usr/local/bin/
 
 #Install Helm 
-# Install Prerequisites:Helm needed by operator-sdk for Helm-based Operators 
 curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -
 sudo apt-get install apt-transport-https --yes
 echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
 sudo apt-get update
 sudo apt-get install -y helm 
 
-#Configure kubectl & Helm 
+#Configure kubectl&Helm 
 sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/
 sudo chmod 644 ~/.kube/k3s.yaml
 export KUBECONFIG=~/.kube/k3s.yaml
