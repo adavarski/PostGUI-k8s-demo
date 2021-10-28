@@ -95,11 +95,11 @@ $ helm delete postgui
 cd ./k8s/k8s-manifests
 $ kubectl delete -f postgres-deployment.yaml -f postgres-service.yaml -f postgrest-deployment.yaml -f postgrest-service.yaml
 ```
-Note: k8s workloads
+Note: k8s workloads : PostgreSQL + PostgREST + PostGUI
 
 - PostgreSQL - Database.
 - PostgREST  - PostgREST serves a fully RESTful API from any existing PostgreSQL database.
-- PostGUI    - App is a React web application to query and share any PostgreSQL database
+- PostGUI    - React web application to query and share any PostgreSQL database
 
 ### 3. Describe a way to automate the CI/CD process of all of the above  
 
