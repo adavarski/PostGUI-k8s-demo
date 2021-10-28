@@ -18,7 +18,7 @@ Setup local development environment (install/setup all needed software)
 ```
 ./utils//setup-environment.sh
 ```
-Note: For setting up Kubernetes local development environment, there are two recommended methods
+Note: For setting up Kubernetes local development environment, there are two recommended methods:
 
 - k3s
 - minikube
