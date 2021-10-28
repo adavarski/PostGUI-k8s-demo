@@ -98,8 +98,8 @@ $ kubectl delete -f postgres-deployment.yaml -f postgres-service.yaml -f postgre
 ```
 Note: k8s workloads : PostgreSQL + PostgREST + PostGUI
 
-- PostgreSQL - Database.
-- PostgREST  - PostgREST serves a fully RESTful API from any existing PostgreSQL database.
+- PostgreSQL - Database
+- PostgREST  - PostgREST serves a fully RESTful API from any existing PostgreSQL database
 - PostGUI    - React web application to query and share any PostgreSQL database
 
 ### 3. Describe a way to automate the CI/CD process of all of the above  
@@ -113,9 +113,9 @@ Example J.pipelines:
 
 [Example J.pipeline: Jenkinsfile-PostGUI-docker-build-k8s-deploy-via-helm](https://github.com/adavarski/PostGUI-k8s-demo/blob/main/jenkins/Jenkinsfile-PostGUI-docker-build-k8s-deploy-via-helm)
 
-[Example J.pipeline PostGUI-docker-build-k8s-deploy-via-helm J.console output](https://github.com/adavarski/PostGUI-k8s-demo/blob/main/jenkins/J.console-logs/J.PostGUI-docker-build-k8s-deploy-via-helm-consoleText.txt)
+[Example J.pipeline: PostGUI-docker-build-k8s-deploy-via-helm: J.console output](https://github.com/adavarski/PostGUI-k8s-demo/blob/main/jenkins/J.console-logs/J.PostGUI-docker-build-k8s-deploy-via-helm-consoleText.txt)
 
-[Example J.pipeline: Jenkinsfile-PostGUI-docker-build-k8s-deploy-via-helm](https://github.com/adavarski/PostGUI-k8s-demo/blob/main/pictures/PostGUI-docker-build-k8s-deploy-via-helm.png) -> J.UI:
+[Example J.pipeline -> J.UI: Jenkinsfile-PostGUI-docker-build-k8s-deploy-via-helm](https://github.com/adavarski/PostGUI-k8s-demo/blob/main/pictures/PostGUI-docker-build-k8s-deploy-via-helm.png):
 
 <img src="https://github.com/adavarski/PostGUI-k8s-demo/blob/main/pictures/PostGUI-docker-build-k8s-deploy-via-helm.png" width="900">
 
