@@ -23,7 +23,7 @@ Note: For setting up Kubernetes local development environment, there are two rec
 - k3s
 - minikube
 
-k3s is 40MB binary that runs “a fully compliant production-grade Kubernetes distribution” and requires only 512MB of RAM. k3s is a great way to wrap applications that you may not want to run in a full production Cluster but would like to achieve greater uniformity in systems deployment, monitoring, and management across all development operations.  Of the two (k3s & minikube), k3s tends to be the most viable. It is closer to a production style deployment. 
+k3s is 40MB binary that runs “a fully compliant production-grade Kubernetes distribution” and requires only 512MB of RAM. k3s is a great way to wrap applications that you may not want to run in a full production k8s cluster, but would like to achieve greater uniformity in systems deployment, monitoring, and management across all development operations. Of the two (k3s & minikube), k3s tends to be the most viable. k3s is closer to a production style deployment. 
 
 ### 1.Containerize PostGUI App:
 
