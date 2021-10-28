@@ -90,8 +90,16 @@ $ kubectl apply -f postgres-deployment.yaml -f postgres-service.yaml -f postgres
 $ cd ./k8s/helm
 $ helm upgrade --install postgui postgui
 $ helm list
+Clean:
 $ helm delete postgui
+cd ./k8s/k8s-manifests
+$ kubectl delete -f postgres-deployment.yaml -f postgres-service.yaml -f postgrest-deployment.yaml -f postgrest-service.yaml
 ```
+Note: k8s workloads
+
+- PostgreSQL - Database.
+- PostgREST  - PostgREST serves a fully RESTful API from any existing PostgreSQL database.
+- PostGUI    - App is a React web application to query and share any PostgreSQL database
 
 ### 3. Describe a way to automate the CI/CD process of all of the above  
 
