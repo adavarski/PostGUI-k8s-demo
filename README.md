@@ -106,7 +106,7 @@ Note: k8s workloads : PostgreSQL + PostgREST + PostGUI
 
 (Optional for Bonus points)  => Developing a pipeline for automating all of the above in a tool of personal preference
 
-Note: Using Jenkins pipelines:
+Note: Using Jenkins pipelines for CI/CD:
 
 Example J.pipelines:
 <img src="https://github.com/adavarski/PostGUI-k8s-demo/blob/main/pictures/PostGUI-pipelines-examples.png" width="900">
