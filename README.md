@@ -120,7 +120,7 @@ Example J.pipelines:
 
 ```
 ### Check k8s workloads
-
+$ export KUBECONFIG=~/.kube/k3s.yaml
 $ kubectl get po
 NAME                         READY   STATUS    RESTARTS   AGE
 postgres-5b467dbcf4-xbtsk    1/1     Running   0          2m50s
