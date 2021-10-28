@@ -1,4 +1,4 @@
-# k8s: PostGUI app demo (containerize app, k8s deploy, CI/CD pipelines)
+# k8s: PostGUI app demo (containerize app, k8s app+dependencies deploy, CI/CD pipelines)
 
 ### Tasks:
 
