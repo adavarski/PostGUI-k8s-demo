@@ -165,7 +165,7 @@ Check PostGUI: Browser: http://localhost:8771
 
 <img src="https://github.com/adavarski/PostGUI-k8s-demo/blob/main/pictures/postgregui-UI.png" width="700">
 
-TODO: Parametrize J.pipelines : App versioning and upgrades (Helm, etc.) and GitOps (ArgoCD). Use Jenkins k8s plugins for k8s deployments (for PoC KISS is used).
+TODO: Parametrize J.pipelines : App versioning and upgrades (Helm, etc.). Use Jenkins k8s plugins for k8s deployments (for PoC KISS is used). Implement GitOps (ArgoCD||Gitlab||JenkisX) instead of Jenkins.
 
 ### 4. BASH: 
 
