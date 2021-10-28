@@ -115,7 +115,7 @@ Example J.pipelines:
 
 [Example ->  J.pipeline: PostGUI-docker-build-k8s-deploy-via-helm: J.console output](https://github.com/adavarski/PostGUI-k8s-demo/blob/main/jenkins/J.console-logs/J.PostGUI-docker-build-k8s-deploy-via-helm-consoleText.txt)
 
-[Example J.pipeline -> J.UI: Jenkinsfile-PostGUI-docker-build-k8s-deploy-via-helm](https://github.com/adavarski/PostGUI-k8s-demo/blob/main/pictures/PostGUI-docker-build-k8s-deploy-via-helm.png):
+[Example J.pipeline UI screenshot ->  Jenkinsfile-PostGUI-docker-build-k8s-deploy-via-helm](https://github.com/adavarski/PostGUI-k8s-demo/blob/main/pictures/PostGUI-docker-build-k8s-deploy-via-helm.png):
 
 <img src="https://github.com/adavarski/PostGUI-k8s-demo/blob/main/pictures/PostGUI-docker-build-k8s-deploy-via-helm.png" width="900">
 
