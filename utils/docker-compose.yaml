@@ -5,7 +5,7 @@ services:
     container_name: postgres
     image: postgres
     ports:
-        - "5432:5432" # Exposing Postgres on different port for convenience
+        - "5432:5432"
     environment:
         POSTGRES_DB: "dvdrental"
         POSTGRES_PASSWORD: "password"
