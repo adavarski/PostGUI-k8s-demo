@@ -111,9 +111,9 @@ Note: Using Jenkins pipelines for CI/CD:
 Example J.pipelines:
 <img src="https://github.com/adavarski/PostGUI-k8s-demo/blob/main/pictures/PostGUI-pipelines-examples.png" width="900">
 
-[Example J.pipeline: Jenkinsfile-PostGUI-docker-build-k8s-deploy-via-helm](https://github.com/adavarski/PostGUI-k8s-demo/blob/main/jenkins/Jenkinsfile-PostGUI-docker-build-k8s-deploy-via-helm)
+[Example ->  J.pipeline: Jenkinsfile-PostGUI-docker-build-k8s-deploy-via-helm](https://github.com/adavarski/PostGUI-k8s-demo/blob/main/jenkins/Jenkinsfile-PostGUI-docker-build-k8s-deploy-via-helm)
 
-[Example J.pipeline: PostGUI-docker-build-k8s-deploy-via-helm: J.console output](https://github.com/adavarski/PostGUI-k8s-demo/blob/main/jenkins/J.console-logs/J.PostGUI-docker-build-k8s-deploy-via-helm-consoleText.txt)
+[Example ->  J.pipeline: PostGUI-docker-build-k8s-deploy-via-helm: J.console output](https://github.com/adavarski/PostGUI-k8s-demo/blob/main/jenkins/J.console-logs/J.PostGUI-docker-build-k8s-deploy-via-helm-consoleText.txt)
 
 [Example J.pipeline -> J.UI: Jenkinsfile-PostGUI-docker-build-k8s-deploy-via-helm](https://github.com/adavarski/PostGUI-k8s-demo/blob/main/pictures/PostGUI-docker-build-k8s-deploy-via-helm.png):
 
