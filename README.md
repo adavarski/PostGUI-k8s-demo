@@ -64,6 +64,7 @@ INFO Kubernetes file "postgrest-deployment.yaml" created
 INFO Kubernetes file "postgui-deployment.yaml" created 
 
 $ cd ./k8s/k8s-manifests
+$ export KUBECONFIG=~/.kube/k3s.yaml
 $ kubectl apply -f . 
 deployment.apps/postgres created
 service/postgres created
@@ -71,7 +72,7 @@ deployment.apps/postgrest created
 service/postgrest created
 deployment.apps/postgui created
 service/postgui created
-
+Clean:
 $ kubectl delete -f . 
 ```
 
