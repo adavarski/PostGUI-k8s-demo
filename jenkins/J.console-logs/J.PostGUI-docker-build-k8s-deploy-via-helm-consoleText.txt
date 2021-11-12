@@ -1,4 +1,4 @@
-Started by user Anastas Davarski
+Started by user A.Davarski
 Running in Durability level: MAX_SURVIVABILITY
 [Pipeline] Start of Pipeline
 [Pipeline] node
@@ -40,7 +40,8 @@ Running on Jenkins in /var/lib/jenkins/workspace/PostGUI-docker-build-k8s-deploy
 [Pipeline] isUnix
 [Pipeline] sh
 [2021-10-27T10:13:11.356Z] + docker build -t davarski/postgui .
-[2021-10-27T10:13:13.841Z] Sending build context to Docker daemon   1.39MB
+[2021-10-27T10:13:13.841Z] Sending build context to Docker daemon   1.39MB
+
 [2021-10-27T10:13:13.841Z] Step 1/9 : FROM node:16
 [2021-10-27T10:13:13.841Z]  ---> 3b66eb585643
 [2021-10-27T10:13:13.841Z] Step 2/9 : RUN apt update
