@@ -1,4 +1,4 @@
-Started by user Anastas Davarski
+Started by user A.Davarski
 Running in Durability level: MAX_SURVIVABILITY
 [Pipeline] Start of Pipeline
 [Pipeline] node
